@@ -1,0 +1,2 @@
+import {Link} from 'react-router-dom'; import {Search} from 'lucide-react';
+export default function Header({search,setSearch}){return <header><div className="nav"><Link to="/" className="logo">XERO<span>®</span></Link><nav><Link to="/">Inicio</Link><Link to="/productos">Productos</Link></nav><div className="search"><Search size={17}/><input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Buscar reloj o marca..."/></div></div></header>}

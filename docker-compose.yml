@@ -1,0 +1,13 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: prismo-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: prismo
+      POSTGRES_PASSWORD: prismo
+      POSTGRES_DB: prismo
+    ports: ["5432:5432"]
+    volumes: ["prismo_pgdata:/var/lib/postgresql/data"]
+volumes:
+  prismo_pgdata:
